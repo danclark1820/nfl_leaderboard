@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= params[:leaderboard] %> NFL Leader Board</title>
+  </head>
+
+  <h1>NFL Leader Board<h1>
+    <body>
+        <p>Team: Wins - Losses</p>
+        <ul><% @team_hash.each do |key, value| %>
+            <li><%= key %>: <%= value[:wins] %> - <%= value[:losses] %></li>
+            <% end %>
+        </ul>
+    </body>
+</html>
